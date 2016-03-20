@@ -1,0 +1,2 @@
+module UncategorizedObjectsHelper
+end

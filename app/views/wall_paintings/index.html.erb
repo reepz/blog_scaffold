@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wall Paintings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wall_paintings.each do |wall_painting| %>
+      <tr>
+        <td><%= link_to 'Show', wall_painting %></td>
+        <td><%= link_to 'Edit', edit_wall_painting_path(wall_painting) %></td>
+        <td><%= link_to 'Destroy', wall_painting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wall painting', new_wall_painting_path %>
+
+<%= link_to 'Back to Upload', static_pages_upload_path %>

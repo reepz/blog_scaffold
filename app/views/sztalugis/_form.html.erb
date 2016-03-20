@@ -1,0 +1,17 @@
+<%= form_for(@sztalugi) do |f| %>
+  <% if @sztalugi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sztalugi.errors.count, "error") %> prohibited this sztalugi from being saved:</h2>
+
+      <ul>
+      <% @sztalugi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

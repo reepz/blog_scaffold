@@ -1,0 +1,2 @@
+module FotografikasHelper
+end

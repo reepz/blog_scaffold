@@ -1,0 +1,2 @@
+module SztalugisHelper
+end

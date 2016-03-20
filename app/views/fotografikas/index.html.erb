@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fotografikas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fotografikas.each do |fotografika| %>
+      <tr>
+        <td><%= link_to 'Show', fotografika %></td>
+        <td><%= link_to 'Edit', edit_fotografika_path(fotografika) %></td>
+        <td><%= link_to 'Destroy', fotografika, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fotografika', new_fotografika_path %>
+<%= link_to 'Back to Upload', static_pages_upload_path %>
