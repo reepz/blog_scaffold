@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  resources :uncategorized_objects
-  resources :sztalugis
-  resources :fotografia
-  resources :fotografikas
-  resources :wall_paintings
+
   get 'static_pages/home'
 
   get 'static_pages/about'
