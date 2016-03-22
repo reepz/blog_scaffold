@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= @painting.title %>
+<%= @painting.description %>
+<%= image_tag("#{@painting.my_file}") %>
+
+<%= link_to 'Edit', edit_painting_path(@painting) %> |
+<%= link_to 'Back', paintings_path %>
