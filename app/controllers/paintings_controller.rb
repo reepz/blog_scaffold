@@ -10,6 +10,7 @@ class PaintingsController < ApplicationController
   # GET /paintings/1
   # GET /paintings/1.json
   def show
+    @paintings = Painting.all
   end
 
   # GET /paintings/new

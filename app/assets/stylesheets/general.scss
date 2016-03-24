@@ -1,14 +1,33 @@
+html *{
+  font-family: 'Coda', cursive;
+}
+
 body {
   margin: 0;
+  background: image-url("wood_1");
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
+a:hover{
+   background: none!important;
 }
 
-.wrapper {
-  background: orange;
-  height: 100%;
+.main_wrapper {
+  height: 100vh;
 }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site_container {
+  margin-top: 40px;
+  margin-left: 120px;
+  margin-right: 120px;
+} 
+
+
+
+
 

@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'flexlayout-rails'
 
-
+gem 'bootstrap-sass', '~> 3.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
@@ -26,8 +26,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 
 gem 'carrierwave'
-gem 'mini_magick'
-gem 'graphicsmagick'
+
+
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

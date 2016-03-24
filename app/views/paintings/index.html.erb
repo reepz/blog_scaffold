@@ -2,34 +2,36 @@
 
 <h1>Listing Paintings</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  
-<!--TEMP FOR GALLERY DISPLAY TEST-->
-<div class="gallery">
-  <% @paintings.each do |painting| %>
-    <%= image_tag("#{painting.my_file}") %>
-  <% end %>
-</div>
-<!--TEMP FOR GALLERY DISPLAY TEST-->
 
-  <tbody>
-    <% @paintings.each do |painting| %>
+<!--TeMP placeholder SHIT-->
+<br><br>
+<h1><%= link_to 'New Painting', new_painting_path %></h1>
+<!--TeMP SHIT-->
+
+
+
+  <table>
+    <thead>
       <tr>
-        <td><a href="<%= painting.my_file %>">Download</a></td>
-        <td><%= link_to 'Show', painting %></td>
-        <td><%= link_to 'Edit', edit_painting_path(painting) %></td>
-        <td><%= link_to 'Destroy', painting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+    </thead>
+    
+    <%= render 'layouts/gallery' %>
+  
+    <tbody>
+      <% @paintings.each do |painting| %>
+        <tr>
+          <td><a href="<%= painting.my_file %>">Download</a></td>
+          <td><%= link_to 'Show', painting %></td>
+          <td><%= link_to 'Edit', edit_painting_path(painting) %></td>
+          <td><%= link_to 'Destroy', painting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
 
 <%= link_to 'New Painting', new_painting_path %>
 <%= link_to 'Back to Upload', static_pages_upload_path %>

@@ -1,11 +1,9 @@
 .top_links {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    padding: 0;
-    background: #002e4d;
-    color: white;
-    margin: 0;
-    line-height: 3;
+    background-color: rgba(163, 163, 194, 0.1);
+    line-height: 2;
+    border-radius: 3px;
+    font-size: 14px;
 }
