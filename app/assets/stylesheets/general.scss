@@ -1,24 +1,31 @@
-html *{
-  font-family: 'Coda', cursive;
+*{
+  font-family: 'Coda', cursive!important;
 }
 
 body {
   margin: 0;
-  background: image-url("wood_1");
+  background: image-url("black_paper");
 }
 
-a:hover{
-   background: none!important;
-}
 
-.main_wrapper {
-  height: 100vh;
-}
-
-a {
+a:link {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
+}
+
+
+/* visited link */
+
+
+/* mouse over link */
+a:hover {
+    background: none!important;
+}
+
+/* selected link */
+a:active {
+    color: blue;
 }
 
 .site_container {

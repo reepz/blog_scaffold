@@ -6,9 +6,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
-  
-
-  
 </head>
 <body>
   <div class="site_container">
@@ -16,8 +13,8 @@
     <%= render 'shared/top_links' %>
     <div class="main_wrapper">
       <%= yield %>
+      <%= render 'shared/footer' %>
     </div>
-    <%= render 'shared/footer' %>
   </div>
 </body>
 </html>

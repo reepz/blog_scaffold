@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<div class="painting_wrapper">
+<div class="paintings-show-wrapper">
   <h1><%= @painting.title %></h1>
   <%= image_tag("#{@painting.my_file}") %>
   <p><%= @painting.description %></p>
 </div>
 
-<%= link_to 'Edit', edit_painting_path(@painting) %> |
-<%= link_to 'Back', paintings_path %>
+<div class="paintings-show-nav">
+  <%= link_to 'Edit', edit_painting_path(@painting) %>
+  <%= link_to 'Back', paintings_path %>
+</div>

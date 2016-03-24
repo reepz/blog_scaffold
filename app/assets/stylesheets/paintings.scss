@@ -2,13 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.painting_wrapper {
+.paintings-show-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
-  p {
-    text-indent: 40px;
-  }
+}
+
+.paintings-index {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.paintings-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.paintings-nav {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
 }
