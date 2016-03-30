@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
 <h1>Malarstwo</h1>
 
-<%= link_to 'New Painting', new_painting_path %>
-<%= link_to 'Back to Upload', static_pages_upload_path %>
+<ul>
+  <li><%= link_to 'Dodaj Obrazek', new_painting_path %></li>
+  <li><%= link_to 'Powrót', static_pages_upload_path %></li>
+</ul>
 
-<% @paintings.each do |painting| %>
+
+
+  <% @paintings.each do |painting| %>
   <div class="paintings-index">
-     <%= link_to image_tag("#{painting.my_file}"), painting %>
-       <div class="paintings-links">
-         <a href="<%= painting.my_file %>">Download</a>
-         <%= link_to 'Show', painting %>
-         <%= link_to 'Edit', edit_painting_path(painting) %>
-         <%= link_to 'Destroy', painting, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-  </div>
+  <%= link_to image_tag("#{painting.my_file.url(:thumb)}"), painting %>
+     <div class="paintings-links">
+       <a href="<%= painting.my_file %>">Pobierz</a>
+       <%= link_to 'Edycja', edit_painting_path(painting) %>
+       <%= link_to 'Usuń', painting, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+</div>
 <% end %>
 
 

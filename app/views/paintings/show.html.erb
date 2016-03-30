@@ -2,11 +2,16 @@
 
 <div class="paintings-show-wrapper">
   <h1><%= @painting.title %></h1>
-  <%= image_tag("#{@painting.my_file}") %>
   <p><%= @painting.description %></p>
+  <!--<%= image_tag("#{@painting.my_file}") %>-->
+  <!--<%= link_to image_tag("#{@painting.my_file.url(:medium)}"), painting_path(@painting) %>-->
+
+   <a href="<%= @painting.my_file %>"><%= image_tag("#{@painting.my_file.url(:medium)}") %></a>
 </div>
 
-<div class="paintings-show-nav">
-  <%= link_to 'Edit', edit_painting_path(@painting) %>
-  <%= link_to 'Back', paintings_path %>
+<div class="paintings-nav">
+  <ul>
+    <li><%= link_to 'Edit', edit_painting_path(@painting) %></li>
+    <li><%= link_to 'Back', paintings_path %></li>          
+  </ul>
 </div>

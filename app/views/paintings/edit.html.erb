@@ -1,6 +1,9 @@
 <h1>Editing Painting</h1>
 
 <%= render 'form' %>
+<ul>
+    <li><%= link_to 'Wyświetl obraz', @painting %></li>
+    <li><%= link_to 'Powrót', paintings_path %></li>
 
-<%= link_to 'Show', @painting %> |
-<%= link_to 'Back', paintings_path %>
+</ul>
+

@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @paintings = Painting.all
   end
 
   def about

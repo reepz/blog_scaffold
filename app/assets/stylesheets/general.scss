@@ -4,28 +4,18 @@
 
 body {
   margin: 0;
-  background: image-url("black_paper");
+  background: image-url("black_linen_v2");
 }
 
-
-a:link {
-  color: #fff;
+a {
+  color: gray;
   text-decoration: none;
   transition: color 0.2s;
 }
 
-
-/* visited link */
-
-
-/* mouse over link */
 a:hover {
     background: none!important;
-}
-
-/* selected link */
-a:active {
-    color: blue;
+    color: white;
 }
 
 .site_container {

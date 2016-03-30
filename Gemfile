@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 
 gem 'carrierwave'
+gem "mini_magick"
+gem 'devise'
 
 
 
