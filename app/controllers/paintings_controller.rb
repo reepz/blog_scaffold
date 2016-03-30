@@ -1,6 +1,7 @@
 class PaintingsController < ApplicationController
   before_action :set_painting, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show]
+
 
   # GET /paintings
   # GET /paintings.json
@@ -16,7 +17,7 @@ class PaintingsController < ApplicationController
 
   # GET /paintings/new
   def new
-    @painting = Painting.new
+    @painting = current_user.paintings.build
   end
 
   # GET /paintings/1/edit
@@ -26,7 +27,7 @@ class PaintingsController < ApplicationController
   # POST /paintings
   # POST /paintings.json
   def create
-    @painting = Painting.new(painting_params)
+    @painting = current_user.paintings.build(painting_params)
     @painting.my_file = params[:file]
     respond_to do |format|
       if @painting.save

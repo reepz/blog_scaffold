@@ -3,15 +3,23 @@
 <div class="paintings-show-wrapper">
   <h1><%= @painting.title %></h1>
   <p><%= @painting.description %></p>
-  <!--<%= image_tag("#{@painting.my_file}") %>-->
-  <!--<%= link_to image_tag("#{@painting.my_file.url(:medium)}"), painting_path(@painting) %>-->
+  
+  <!--added for reference how to combine link_to and image_tag-->
+    <!--<%= image_tag("#{@painting.my_file}") %>-->
+    <!--<%= link_to image_tag("#{@painting.my_file.url(:medium)}"), painting_path(@painting) %>-->
+  <!--added for reference how to combine link_to and image_tag-->
+
 
    <a href="<%= @painting.my_file %>"><%= image_tag("#{@painting.my_file.url(:medium)}") %></a>
 </div>
+<p>Dodane przez: <br>
+<%= @painting.user.email %></p>
 
-<div class="paintings-nav">
-  <ul>
-    <li><%= link_to 'Edit', edit_painting_path(@painting) %></li>
-    <li><%= link_to 'Back', paintings_path %></li>          
-  </ul>
-</div>
+<% if user_signed_in? %>
+  <div class="paintings-nav">
+    <ul>
+      <li><%= link_to 'Edit', edit_painting_path(@painting) %></li>
+      <li><%= link_to 'Back', paintings_path %></li>          
+    </ul>
+  </div>
+<% end %>

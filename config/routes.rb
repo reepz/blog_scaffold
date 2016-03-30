@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   
   get 'static_pages/upload'
+  get '/kalliope' => 'static_pages#admin'
 
-  resources :posts
   resources :paintings
   
   root 'static_pages#home'
