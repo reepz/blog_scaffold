@@ -12,7 +12,7 @@
 
 .paintings-index {
   border: none;
-  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -26,4 +26,10 @@
   display: flex;
   justify-content: space-around;
   font-size: 14px;
+}
+
+.paintings-index-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }

@@ -2,4 +2,8 @@
   <li><%= link_to 'Portfolio', static_pages_home_path %></li>
   <li><%= link_to 'O mnie', static_pages_about_path %></li>
   <li><%= link_to 'Kontakt', static_pages_contact_path %></li>
+  <% if user_signed_in? && current_user == "admin@wp.pl" %>
+    <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+    <li><%= link_to 'Admin', paintings_path %></li>
+  <% end %>
 </ul>
