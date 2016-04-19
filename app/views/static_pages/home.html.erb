@@ -2,7 +2,13 @@
 <div class="home-gallery">
   <% @paintings.each do |painting| %>
   <div class="home-thumbnail">
-     <%= link_to image_tag("#{painting.my_file.url(:thumb)}"), painting %>
+    <div class="thumbnail-wrapper">    
+    <%= link_to image_tag("#{painting.my_file.url(:thumb)}"), painting %>
+    </div>
+    <div class="thumbnail-title">
+    <%= painting.title %> 
+    </div>
    </div>
   <% end %>
 </div>
+

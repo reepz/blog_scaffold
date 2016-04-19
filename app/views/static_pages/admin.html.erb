@@ -1,8 +1,11 @@
-<h1>
-<%= link_to 'Panel Administracyjny', paintings_path %>
+<h1>Admin Panel</h1>
+
+<ul>
+  <li><%= link_to 'Panel Administracyjny', paintings_path %></li>
+  <% if user_signed_in? %>
+    <li><%= link_to('Wyloguj', destroy_user_session_path, :method => :delete) %></li>
+  <% end %>
+</ul>
+
 <!--<li><%= link_to 'Login', new_user_session_path %></li>-->
 <!--<li><%= link_to 'Rejestracja', new_user_registration_path %></li>-->
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-<% end %>
-</h1>

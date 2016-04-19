@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  # uncomment line below to remove route to allow signup page to showup
+  # get '/users/sign_up' => 'hehe#admin'
   
   devise_for :users
   get 'static_pages/home'

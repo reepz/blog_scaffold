@@ -8,10 +8,13 @@
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+    img {
+      border: solid 1px gray;
+    }
 }
 
 .paintings-index {
-  border: none;
+  border: 1px solid white;
   justify-content: center;
   flex-direction: column;
 }

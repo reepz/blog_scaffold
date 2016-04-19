@@ -3,18 +3,12 @@
 <div class="paintings-show-wrapper">
   <h1><%= @painting.title %></h1>
   <p><%= @painting.description %></p>
-  
   <!--added for reference how to combine link_to and image_tag-->
     <!--<%= image_tag("#{@painting.my_file}") %>-->
     <!--<%= link_to image_tag("#{@painting.my_file.url(:medium)}"), painting_path(@painting) %>-->
   <!--added for reference how to combine link_to and image_tag-->
-
-
    <a href="<%= @painting.my_file %>"><%= image_tag("#{@painting.my_file.url(:medium)}") %></a>
 </div>
-<p>Dodane przez: <br>
-<%= @painting.user.email %></p>
-
 <% if user_signed_in? %>
   <div class="paintings-nav">
     <ul>
