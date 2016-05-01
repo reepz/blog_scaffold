@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .paintings-show-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   padding-left: 50px;
   padding-right: 50px;
     img {
@@ -14,9 +14,11 @@
 }
 
 .paintings-index {
-  border: 1px solid white;
-  justify-content: center;
-  flex-direction: column;
+  border: 1px solid gray;
+  margin: 1px;
+  margin-top: 15px;
+  // justify-content: center;
+
 }
 
 .paintings-links {
@@ -26,8 +28,8 @@
 }
 
 .paintings-nav {
-  display: flex;
-  justify-content: space-around;
+  // display: flex;
+  // justify-content: space-around;
   font-size: 14px;
 }
 
@@ -35,4 +37,5 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
